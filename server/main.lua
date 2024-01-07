@@ -68,11 +68,10 @@ local moneywashticket3 =  xPlayer.getInventoryItem('moneywashticket3')
                 TriggerClientEvent('ox_lib:notify', source, {title = _("Noticket2"), position = 'top', type = 'error'})
             end
         else
-            xPlayer.removeInventoryItem(Player, 'black_money', Amount)
-            xPlayer.removeInventoryItem(Player, 'moneywashticket', 1)
+            xPlayer.removeInventoryItem('black_money', Amount)
             TriggerClientEvent('azakit_moneywash:moneywashactions', Player)
             Citizen.Wait(WashDuration)
-            xPlayer.addInventoryItem(Player, 'money', WashTotal)
+            xPlayer.addInventoryItem('money', WashTotal)
             local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash: " ..Amount.. " black money and earned " ..WashTotal.." money."
             discordLog(message, Webhook)
         end
@@ -124,7 +123,6 @@ local moneywashlicense3 =  xPlayer.getInventoryItem('moneywashlicense3')
             end
        else
             xPlayer.removeInventoryItem('black_money', Amount)
-            xPlayer.removeInventoryItem('moneywashticket', 1)
             TriggerClientEvent('azakit_moneywash:moneywashactions', Player)
             Citizen.Wait(WashDuration)
             xPlayer.addInventoryItem('money', WashTotal)
