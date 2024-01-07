@@ -25,7 +25,6 @@ end)
 
 RegisterServerEvent('azakit_moneywash:moneywash')
 AddEventHandler('azakit_moneywash:moneywash', function(Amount)
-local Player = source
 local src = source
 local xPlayer = ESX.GetPlayerFromId(src)
 local MWashTax = Amount * Tax
@@ -43,7 +42,7 @@ local moneywashticket3 =  xPlayer.getInventoryItem('moneywashticket3')
             if moneywashticket3.count >= 1 then
                 xPlayer.removeInventoryItem('black_money', Amount)
                 xPlayer.removeInventoryItem('moneywashticket3', 1)
-                TriggerClientEvent('azakit_moneywash:moneywashactions', Player)
+                TriggerClientEvent('azakit_moneywash:moneywashactions', src)
                 Citizen.Wait(WashDuration)
                 xPlayer.addInventoryItem('money', WashTotal3) 
                 local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash Tickets 3: " ..Amount.. " black money and earned " ..WashTotal3.." money."
@@ -51,7 +50,7 @@ local moneywashticket3 =  xPlayer.getInventoryItem('moneywashticket3')
             elseif moneywashticket2.count  >= 1 then
                 xPlayer.removeInventoryItem('black_money', Amount)
                 xPlayer.removeInventoryItem('moneywashticket2', 1)
-                TriggerClientEvent('azakit_moneywash:moneywashactions', Player)
+                TriggerClientEvent('azakit_moneywash:moneywashactions', src)
                 Citizen.Wait(WashDuration)
                 xPlayer.addInventoryItem('money', WashTotal2) 
                 local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash Tickets 2: " ..Amount.. " black money and earned " ..WashTotal2.." money."
@@ -59,7 +58,7 @@ local moneywashticket3 =  xPlayer.getInventoryItem('moneywashticket3')
             elseif moneywashticket.count  >= 1 then
                 xPlayer.removeInventoryItem('black_money', Amount)
                 xPlayer.removeInventoryItem('moneywashticket', 1)
-                TriggerClientEvent('azakit_moneywash:moneywashactions', Player)
+                TriggerClientEvent('azakit_moneywash:moneywashactions', src)
                 Citizen.Wait(WashDuration)
                 xPlayer.addInventoryItem('money', WashTotal)
                 local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash Tickets 1: " ..Amount.. " black money and earned " ..WashTotal.." money."
@@ -69,7 +68,7 @@ local moneywashticket3 =  xPlayer.getInventoryItem('moneywashticket3')
             end
         else
             xPlayer.removeInventoryItem('black_money', Amount)
-            TriggerClientEvent('azakit_moneywash:moneywashactions', Player)
+            TriggerClientEvent('azakit_moneywash:moneywashactions', src)
             Citizen.Wait(WashDuration)
             xPlayer.addInventoryItem('money', WashTotal)
             local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash: " ..Amount.. " black money and earned " ..WashTotal.." money."
@@ -82,7 +81,6 @@ end)
 
 RegisterServerEvent('azakit_moneywash:moneywashlic')
 AddEventHandler('azakit_moneywash:moneywashlic', function(Amount)
-local Player = source
 local src = source
 local xPlayer = ESX.GetPlayerFromId(src)
 local MWashTax = Amount * Tax
@@ -99,21 +97,21 @@ local moneywashlicense3 =  xPlayer.getInventoryItem('moneywashlicense3')
         if License then
             if moneywashlicense3.count  >= 1 then
                 xPlayer.removeInventoryItem('black_money', Amount)
-                TriggerClientEvent('azakit_moneywash:moneywashactions', Player)
+                TriggerClientEvent('azakit_moneywash:moneywashactions', src)
                 Citizen.Wait(WashDuration)
                 xPlayer.addInventoryItem('money', WashTotal3) 
                 local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash License 3: " ..Amount.. " black money and earned " ..WashTotal3.." money."
                 discordLog(message, Webhook)
             elseif moneywashlicense2.count  >= 1 then
                 xPlayer.removeInventoryItem('black_money', Amount)
-                TriggerClientEvent('azakit_moneywash:moneywashactions', Player)
+                TriggerClientEvent('azakit_moneywash:moneywashactions', src)
                 Citizen.Wait(WashDuration)
                 xPlayer.addInventoryItem('money', WashTotal2) 
                 local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash License 2: " ..Amount.. " black money and earned " ..WashTotal2.." money."
                 discordLog(message, Webhook)
             elseif moneywashlicense.count  >= 1 then
                 xPlayer.removeInventoryItem('black_money', Amount)
-                TriggerClientEvent('azakit_moneywash:moneywashactions', Player)
+                TriggerClientEvent('azakit_moneywash:moneywashactions', src)
                 Citizen.Wait(WashDuration)
                 xPlayer.addInventoryItem('money', WashTotal) 
                 local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash License 1: " ..Amount.. " black money and earned " ..WashTotal.." money."
@@ -123,7 +121,7 @@ local moneywashlicense3 =  xPlayer.getInventoryItem('moneywashlicense3')
             end
        else
             xPlayer.removeInventoryItem('black_money', Amount)
-            TriggerClientEvent('azakit_moneywash:moneywashactions', Player)
+            TriggerClientEvent('azakit_moneywash:moneywashactions', src)
             Citizen.Wait(WashDuration)
             xPlayer.addInventoryItem('money', WashTotal)
             local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. xPlayer.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash: " ..Amount.. " black money and earned " ..WashTotal.." money."
