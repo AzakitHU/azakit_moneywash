@@ -1,7 +1,7 @@
 # Moneywash with tickets, licenses, tax levels, transport
 You can wash money in a location obtained through an informant.
 In order to receive the coordinates, the informant performs NPC checks. Do you have the minimum black money for money washing and the information ticket?
-If so, you get the address. However, you will still need a moneywash ticket or license at the venue. There are 3-3 different types of moneywash tickets and licenses, and each one charges different taxes during moneywashing. The ticket is valid for one session. The license is good for any occasion.
+If so, you will receive the address in exchange for the infoticket. However, you will still need a moneywash ticket or license at the venue. There are 3-3 different types of moneywash tickets and licenses, and each one charges different taxes during moneywashing. The ticket is valid for one session. The license is good for any occasion.
 Everything can be easily changed in the config.lua file.
 
 * Easy configuration
