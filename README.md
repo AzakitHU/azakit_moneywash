@@ -83,6 +83,7 @@ https://www.youtube.com/watch?v=OMqsnhoyeDk
 - ESX
 - ox_lib
 - ox_target
+- Ox Inventory
 
 # Documentation
 You can find [Discord](https://discord.gg/DmsF6DbCJ9).
