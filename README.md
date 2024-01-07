@@ -7,7 +7,7 @@ Everything can be easily changed in the config.lua file.
 * Easy configuration
 * Checking items
 * 3 types Moneywash Ticket
-* 3 types Moneywash license
+* 3 types Moneywash License
 * Three tax levels (10%, 20%, 30%)
 * 10 preset addresses
 * Cooldown
