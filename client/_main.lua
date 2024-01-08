@@ -74,7 +74,6 @@ BlipMaken = function()
 end
 
 local CurrentlyWashing = false
-local InsideLaundry = true
 local MWashCooldown =  false
 
 local function Cooldown()
@@ -304,9 +303,6 @@ Citizen.CreateThread(function()
                                 name = 'wash',
                                 icon = 'fa-solid fa-money-bill',
                                 label = _("Peephole"),
-                                canInteract = function()
-                                    return InsideLaundry
-                                end,
                                 onSelect = function()
                                     WashMoney()
                                 end
