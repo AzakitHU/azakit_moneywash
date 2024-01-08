@@ -20,8 +20,8 @@ Duration = 10000 -- Knock Duration. 60000 = 60 seconds
 WashDuration =  60000 --  Moneywash time. 60000 = 60 seconds
 Cooldowntime =  3600000 -- Cooldown time. 60000 = 60 seconds
 
-License = true -- Use license items (moneywashlicense, moneywashlicense2, moneywashlicense3) The license is valid for one session.
-Tickets = true -- Use ticket items (moneywashticket, moneywashticket2, moneywashticket3) The ticket is good for any occasion.
+License = true -- Use license items (moneywashlicense, moneywashlicense2, moneywashlicense3) The license is good for any occasion.
+Tickets = true -- Use ticket items (moneywashticket, moneywashticket2, moneywashticket3) The ticket is valid for one session.
 
 Tax = 0.30 -- DEFAULT (NOT TICKET / NO LICENSE) Amount taxed during moneywashing. e.g.: 0.30 = 30%
 Tax2 = 0.20 -- Amount taxed during moneywashing. e.g.: 0.20 = 20%
