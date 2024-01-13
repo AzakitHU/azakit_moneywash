@@ -1,6 +1,20 @@
 ESX = nil
 TriggerEvent("esx:getSharedObject", function(obj) ESX = obj end)
 
+function PoliceCount()
+    local players = ESX.GetPlayers()
+    local count = 0
+
+    for i = 1, #players do
+        local player = ESX.GetPlayerFromId(players[i])
+        if player.job.name == POLICE_JOB then
+            count = count + 1
+        end
+    end
+
+    return count
+end
+
 ---@param source any Server id
 ---@param item string Item name
 ---@param amount number Amount of item to have
