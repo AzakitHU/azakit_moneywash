@@ -2,6 +2,8 @@ fx_version "adamant"
 game "gta5"
 lua54 'yes'
 
+name         'azakit_moneywash'
+version      '1.1.0'
 author 'Azakit'
 description 'Moneywash with tickets, licenses, tax levels, transport'
 
