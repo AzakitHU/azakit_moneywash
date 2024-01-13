@@ -84,5 +84,9 @@ https://www.youtube.com/watch?v=OMqsnhoyeDk
 - ox_lib
 - ox_target
 
+# UPDATE
+- Added Police check. 
+- Everything is easily configured in config.lua
+
 # Documentation
 You can find [Discord](https://discord.gg/DmsF6DbCJ9).
