@@ -1,3 +1,23 @@
+Start = false
+
+RegisterServerCallback('azakit_moneywash:Start', function(source, cb)
+    if Start then
+        cb({
+            time = false,
+            cops = PoliceCount() >= POLICE_REQ
+        })
+        return
+    end
+    
+    cb({
+        time = true,
+        cops = PoliceCount() >= POLICE_REQ
+    })
+
+    Start = false
+    
+end)
+
 RegisterServerCallback('azakit_moneywash:itemTaken',function(source, cb)
     local src = source
     local xPlayer = ESX.GetPlayerFromId(source)
