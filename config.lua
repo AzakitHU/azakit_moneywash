@@ -2,8 +2,8 @@ LANGUAGE = 'en'
 
 Webhook = "https://discord.com/api/webhooks/1193944718019670168/Dp8XKt9UPm61XYBBMkjgIj3x3v5xA4cNq55sAFIYY3ojWa5lh-gnTckMi8sBTYdPVKah"
 
-POLICE_REQ = 1
-POLICE_JOB = "police"
+POLICE_REQ = 1  -- Minimum police required to start
+POLICE_JOB = "police"  -- Police Job
 
 ITEM = "black_money"  -- Moneywash black money start check.
 TICKETITEM_REQ = true -- If true, you need an extra ticket item
