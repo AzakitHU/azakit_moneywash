@@ -19,4 +19,5 @@ Locales["en"] = {
     Reward = "You got the washed money!",
     Cooldown = "Cooldown active!",
     deliblipname = "Moneywash Point",
+    nopolice = "Not enough Police!",
 }
