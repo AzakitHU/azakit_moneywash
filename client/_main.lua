@@ -8,11 +8,27 @@ Citizen.CreateThread(function()
     TaskStartScenarioInPlace(StartNPC, "WORLD_HUMAN_SMOKING", 0, true)    
     AddEntityMenuItem({
         entity = StartNPC,
-        event = "azakit_moneywash:Check",
+        event = "azakit_moneywash:StartMoneyWash",
         desc = _("start_npc")
     })
 end)
 
+function StartMoneyWash()
+    TriggerServerCallback('azakit_moneywash:Start', function(data)
+        
+        if not data.cops then    
+            lib.notify({
+                position = 'top',
+                title = _("nopolice"),
+                type = 'error'
+              })
+            return
+        end
+		TriggerEvent('azakit_moneywash:Check')
+    
+    end)
+end
+RegisterNetEvent("azakit_moneywash:StartMoneyWash", StartMoneyWash)
 
 RegisterNetEvent('azakit_moneywash:Check', function()
    
