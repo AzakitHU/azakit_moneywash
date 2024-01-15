@@ -83,6 +83,7 @@ https://www.youtube.com/watch?v=OMqsnhoyeDk
 - ESX
 - ox_lib
 - ox_target
+- OX Inventory
 
 # UPDATE
 - Added Police check. 
