@@ -9,7 +9,7 @@ POLICE_JOB = "police"  -- Police Job
 
 ITEM = "black_money"  -- Moneywash black money start check.
 TICKETITEM_REQ = true -- If true, you need an extra ticket item
-TICKETITEM = "bucket" -- Ticket item
+TICKETITEM = "infoticket" -- Ticket item
 TICKETITEM_AMOUNT = 1 -- The number of tickets remove
 ITEM_AMOUNT = 5000  -- Amount of black money required start / no black money check ITEM_AMOUNT = 0 
 
