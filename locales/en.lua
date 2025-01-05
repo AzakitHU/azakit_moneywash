@@ -20,4 +20,10 @@ Locales["en"] = {
     Cooldown = "Cooldown active!",
     deliblipname = "Moneywash Point",
     nopolice = "Not enough Police!",
+    WashAlreadyInProgress = "Money laundering is already in progress.",
+    CollectWashedMoney = "Collect washed money",
+    AlreadyCollected = "You have already collected the money.",
+    RewardAvailable = "Your money is ready, you can collect it where you left it for washing.",
+    LeftArea = "You moved too far from the laundromat and left. The money has been stolen.",
+    MoneywashStart = "The money laundering process has started.",    
 }
