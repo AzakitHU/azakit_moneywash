@@ -80,9 +80,9 @@ https://www.youtube.com/watch?v=OMqsnhoyeDk
 	},
 
 # Requirements
-- ESX
+- ESX or QBCore
 - ox_lib
-- ox_target
+- ox_target or qb-target or no target
 - OX Inventory
 
 # UPDATE
