@@ -89,5 +89,12 @@ https://www.youtube.com/watch?v=OMqsnhoyeDk
 - Added Police check. 
 - Everything is easily configured in config.lua
 
+# UPDATE - Jan 2025
+- In addition to ESX, the script now supports QBCore.
+- Players can now interact with the script using ox_target and qb-target systems, as well as the classic 3D text.
+- To improve gameplay, the process has been updated: if a player receives an address to wash money and successfully drops it off, they can move around while waiting for the wash (they may even be attacked). However, if they leave the configurable zone around the washing point, they lose the money as it’s 'stolen by the washing NPC.' If they stay within a safe distance, they will be notified when the wash is complete and must return to the drop-off point to collect the cleaned money.
+- Bug fixes and improvements.
+
+
 # Documentation
 You can find [Discord](https://discord.gg/DmsF6DbCJ9).
