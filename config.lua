@@ -1,13 +1,15 @@
 LANGUAGE = 'en'
+FrameworkType = "ESX" -- or "QBCore" (and fxmanifest.lua)
+InteractionType = "ox_target" -- Options: "ox_target" or "qb-target" or "3dtext"
 
-Webhook = "https://discord.com/api/webhooks/1193944718019670168/Dp8XKt9UPm61XYBBMkjgIj3x3v5xA4cNq55sAFIYY3ojWa5lh-gnTckMi8sBTYdPVKah"
+Webhook = ""
 
 POLICE_REQ = 1  -- Minimum police required to start
 POLICE_JOB = "police"  -- Police Job
 
 ITEM = "black_money"  -- Moneywash black money start check.
 TICKETITEM_REQ = true -- If true, you need an extra ticket item
-TICKETITEM = "infoticket" -- Ticket item
+TICKETITEM = "bucket" -- Ticket item
 TICKETITEM_AMOUNT = 1 -- The number of tickets remove
 ITEM_AMOUNT = 5000  -- Amount of black money required start / no black money check ITEM_AMOUNT = 0 
 
@@ -22,6 +24,7 @@ START_NPC = {   -- Start Ped
 Duration = 10000 -- Knock Duration. 60000 = 60 seconds
 WashDuration =  60000 --  Moneywash time. 60000 = 60 seconds
 Cooldowntime =  3600000 -- Cooldown time. 60000 = 60 seconds
+WashAreaRadius = 50.0  -- Distance the player cannot leave during the wash
 
 License = true -- Use license items (moneywashlicense, moneywashlicense2, moneywashlicense3) The license is good for any occasion.
 Tickets = true -- Use ticket items (moneywashticket, moneywashticket2, moneywashticket3) The ticket is valid for one session.
