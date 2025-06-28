@@ -1,5 +1,5 @@
 LANGUAGE = 'en'
-FrameworkType = "ESX" -- or "QBCore" (and fxmanifest.lua)
+FrameworkType = "ESX" -- or "QBCore"
 InteractionType = "ox_target" -- Options: "ox_target" or "qb-target" or "3dtext"
 
 Webhook = ""
