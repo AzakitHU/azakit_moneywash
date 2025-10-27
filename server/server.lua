@@ -165,32 +165,32 @@ AddEventHandler('azakit_moneywash:moneywash', function(Amount)
                 player.removeInventoryItemm('black_money', Amount)
                 player.removeInventoryItem('moneywashticket3', 1)
                 TriggerClientEvent('azakit_moneywash:moneywashactions', src, WashTotal3)
-                Citizen.Wait(WashDuration)
-                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash Tickets 3: " ..Amount.. " black money and earned " ..WashTotal3.." money."
+                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash Tickets 3: " ..Amount.. " black money — expected reward: " ..WashTotal3.." money."
                 discordLog(message, Webhook)
+                Citizen.Wait(WashDuration)
             elseif moneywashticket2 and moneywashticket2.count >= 1 then
                 player.removeInventoryItem('black_money', Amount)
                 player.removeInventoryItem('moneywashticket2', 1)
                 TriggerClientEvent('azakit_moneywash:moneywashactions', src, WashTotal2)
-                Citizen.Wait(WashDuration)
-                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash Tickets 2: " ..Amount.. " black money and earned " ..WashTotal2.." money."
+                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash Tickets 2: " ..Amount.. " black money — expected reward: " ..WashTotal2.." money."
                 discordLog(message, Webhook)
+                Citizen.Wait(WashDuration)
             elseif moneywashticket and moneywashticket.count >= 1 then
                 player.removeInventoryItem('black_money', Amount)
                 player.removeInventoryItem('moneywashticket', 1)
                 TriggerClientEvent('azakit_moneywash:moneywashactions', src, WashTotal)
-                Citizen.Wait(WashDuration)
-                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash Tickets 1: " ..Amount.. " black money and earned " ..WashTotal.." money."
+                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash Tickets 1: " ..Amount.. " black money — expected reward: " ..WashTotal.." money."
                 discordLog(message, Webhook)
+                Citizen.Wait(WashDuration)
             else
                 TriggerClientEvent('ox_lib:notify', src, {title = _("Noticket2"), position = 'top', type = 'error'})
             end
         else
             player.removeInventoryItem('black_money', Amount)
             TriggerClientEvent('azakit_moneywash:moneywashactions', src, WashTotal)
-            Citizen.Wait(WashDuration)
-            local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash: " ..Amount.. " black money and earned " ..WashTotal.." money."
+            local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash: " ..Amount.. " black money — expected reward: " ..WashTotal.." money."
             discordLog(message, Webhook)
+            Citizen.Wait(WashDuration)
         end
     else
         TriggerClientEvent('ox_lib:notify', src, {title = _("Noblackmoney"), position = 'top', type = 'error'})
@@ -202,32 +202,32 @@ elseif FrameworkType == "QBCore" then
                 player.Functions.RemoveItem('black_money', Amount)
                 player.Functions.RemoveItem('moneywashticket3', 1)
                 TriggerClientEvent('azakit_moneywash:moneywashactions', src, WashTotal3)
-                Citizen.Wait(WashDuration)
-                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.PlayerData.citizenid .. "\n**ID:** " .. src .. "\n**Log:** Moneywash Tickets 3: " ..Amount.. " black money and earned " ..WashTotal3.." money."
+                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.PlayerData.citizenid .. "\n**ID:** " .. src .. "\n**Log:** Moneywash Tickets 3: " ..Amount.. " black money — expected reward: " ..WashTotal3.." money."
                 discordLog(message, Webhook)
+                Citizen.Wait(WashDuration)
             elseif moneywashticket2 and moneywashticket2.amount >= 1 then
                 player.Functions.RemoveItem('black_money', Amount)
                 player.Functions.RemoveItem('moneywashticket2', 1)
                 TriggerClientEvent('azakit_moneywash:moneywashactions', src, WashTotal2)
-                Citizen.Wait(WashDuration)
-                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.PlayerData.citizenid .. "\n**ID:** " .. src .. "\n**Log:** Moneywash Tickets 2: " ..Amount.. " black money and earned " ..WashTotal2.." money."
+                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.PlayerData.citizenid .. "\n**ID:** " .. src .. "\n**Log:** Moneywash Tickets 2: " ..Amount.. " black money — expected reward: " ..WashTotal2.." money."
                 discordLog(message, Webhook)
+                Citizen.Wait(WashDuration)
             elseif moneywashticket and moneywashticket.amount >= 1 then
                 player.Functions.RemoveItem('black_money', Amount)
                 player.Functions.RemoveItem('moneywashticket', 1)
                 TriggerClientEvent('azakit_moneywash:moneywashactions', src, WashTotal)
-                Citizen.Wait(WashDuration)
-                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.PlayerData.citizenid .. "\n**ID:** " .. src .. "\n**Log:** Moneywash Tickets 1: " ..Amount.. " black money and earned " ..WashTotal.." money."
+                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.PlayerData.citizenid .. "\n**ID:** " .. src .. "\n**Log:** Moneywash Tickets 1: " ..Amount.. " black money — expected reward: " ..WashTotal.." money."
                 discordLog(message, Webhook)
+                Citizen.Wait(WashDuration)
             else
                 TriggerClientEvent('ox_lib:notify', src, {title = _("Noticket2"), position = 'top', type = 'error'})
             end
         else
             player.Functions.RemoveItem('black_money', Amount)
             TriggerClientEvent('azakit_moneywash:moneywashactions', src, WashTotal)
-            Citizen.Wait(WashDuration)
-            local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.PlayerData.citizenid .. "\n**ID:** " .. src .. "\n**Log:** Moneywash: " ..Amount.. " black money and earned " ..WashTotal.." money."
+            local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.PlayerData.citizenid .. "\n**ID:** " .. src .. "\n**Log:** Moneywash: " ..Amount.. " black money — expected reward: " ..WashTotal.." money."
             discordLog(message, Webhook)
+            Citizen.Wait(WashDuration)
         end
     else
         TriggerClientEvent('ox_lib:notify', src, {title = _("Noblackmoney"), position = 'top', type = 'error'})
@@ -245,21 +245,17 @@ print(WashTotal)
     elseif FrameworkType == "QBCore" then
         player = QBCore.Functions.GetPlayer(src)
     end
-
     
-        if FrameworkType == "ESX" then
-            player.addInventoryItem('cash', WashTotal)
-        elseif FrameworkType == "QBCore" then
-            player.Functions.AddMoney('cash', WashTotal)
-        end
-        TriggerClientEvent('azakit_moneywash:collectReward', src)
+    if FrameworkType == "ESX" then
+        player.addInventoryItem('cash', WashTotal)
+    elseif FrameworkType == "QBCore" then
+        player.Functions.AddMoney('cash', WashTotal)
+    end
+    TriggerClientEvent('azakit_moneywash:collectReward', src)
 
-        local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Collected washed money: " .. WashTotal .. " cash."
-        discordLog(message, Webhook)
-
+    local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Collected washed money: " .. WashTotal .. " cash."
+    discordLog(message, Webhook)
 end)
-
-
 
 RegisterServerEvent('azakit_moneywash:moneywashlic')
 AddEventHandler('azakit_moneywash:moneywashlic', function(Amount)
@@ -305,30 +301,30 @@ AddEventHandler('azakit_moneywash:moneywashlic', function(Amount)
             if moneywashlicense3 and moneywashlicense3.count >= 1 then
                 player.removeInventoryItem('black_money', Amount)
                 TriggerClientEvent('azakit_moneywash:moneywashactions', src, WashTotal3)
-                Citizen.Wait(WashDuration)
-                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash License 3: " .. Amount .. " black money and earned " .. WashTotal3 .. " money."
+                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash License 3: " .. Amount .. " black money — expected reward: " .. WashTotal3 .. " money."
                 discordLog(message, Webhook)
+                Citizen.Wait(WashDuration)
             elseif moneywashlicense2 and moneywashlicense2.count >= 1 then
                 player.removeInventoryItem('black_money', Amount)
                 TriggerClientEvent('azakit_moneywash:moneywashactions', src, WashTotal2)
-                Citizen.Wait(WashDuration)
-                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash License 2: " .. Amount .. " black money and earned " .. WashTotal2 .. " money."
+                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash License 2: " .. Amount .. " black money — expected reward: " .. WashTotal2 .. " money."
                 discordLog(message, Webhook)
+                Citizen.Wait(WashDuration)
             elseif moneywashlicense and moneywashlicense.count >= 1 then
                 player.removeInventoryItem('black_money', Amount)
                 TriggerClientEvent('azakit_moneywash:moneywashactions', src, WashTotal)
-                Citizen.Wait(WashDuration)
-                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash License 1: " .. Amount .. " black money and earned " .. WashTotal .. " money."
+                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash License 1: " .. Amount .. " black money — expected reward: " .. WashTotal .. " money."
                 discordLog(message, Webhook)
+                Citizen.Wait(WashDuration)
             else
                 TriggerClientEvent('ox_lib:notify', src, {title = _("Noticket2"), position = 'top', type = 'error'})
             end
         else
             player.removeInventoryItem('black_money', Amount)
             TriggerClientEvent('azakit_moneywash:moneywashactions', src, WashTotal)
-            Citizen.Wait(WashDuration)
-            local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash: " .. Amount .. " black money and earned " .. WashTotal .. " money."
+            local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.identifier .. "\n**ID:** " .. src .. "\n**Log:** Moneywash: " .. Amount .. " black money — expected reward: " .. WashTotal .. " money."
             discordLog(message, Webhook)
+            Citizen.Wait(WashDuration)
         end
     else
         TriggerClientEvent('ox_lib:notify', src, {title = _("Noblackmoney"), position = 'top', type = 'error'})
@@ -339,35 +335,69 @@ elseif FrameworkType == "QBCore" then
             if moneywashlicense3 and moneywashlicense3.amount >= 1 then
                 player.Functions.RemoveItem('black_money', Amount)
                 TriggerClientEvent('azakit_moneywash:moneywashactions', src, WashTotal3)
-                Citizen.Wait(WashDuration)
-                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.PlayerData.citizenid .. "\n**ID:** " .. src .. "\n**Log:** Moneywash License 3: " .. Amount .. " black money and earned " .. WashTotal3 .. " money."
+                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.PlayerData.citizenid .. "\n**ID:** " .. src .. "\n**Log:** Moneywash License 3: " .. Amount .. " black money — expected reward: " .. WashTotal3 .. " money."
                 discordLog(message, Webhook)
+                Citizen.Wait(WashDuration)
             elseif moneywashlicense2 and moneywashlicense2.amount >= 1 then
                 player.Functions.RemoveItem('black_money', Amount)
                 TriggerClientEvent('azakit_moneywash:moneywashactions', src, WashTotal2)
-                Citizen.Wait(WashDuration)
-                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.PlayerData.citizenid .. "\n**ID:** " .. src .. "\n**Log:** Moneywash License 2: " .. Amount .. " black money and earned " .. WashTotal2 .. " money."
+                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.PlayerData.citizenid .. "\n**ID:** " .. src .. "\n**Log:** Moneywash License 2: " .. Amount .. " black money — expected reward: " .. WashTotal2 .. " money."
                 discordLog(message, Webhook)
+                Citizen.Wait(WashDuration)
             elseif moneywashlicense and moneywashlicense.amount >= 1 then
                 player.Functions.RemoveItem('black_money', Amount)
                 TriggerClientEvent('azakit_moneywash:moneywashactions', src, WashTotal)
-                Citizen.Wait(WashDuration)
-                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.PlayerData.citizenid .. "\n**ID:** " .. src .. "\n**Log:** Moneywash License 1: " .. Amount .. " black money and earned " .. WashTotal .. " money."
+                local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.PlayerData.citizenid .. "\n**ID:** " .. src .. "\n**Log:** Moneywash License 1: " .. Amount .. " black money — expected reward: " .. WashTotal .. " money."
                 discordLog(message, Webhook)
+                Citizen.Wait(WashDuration)
             else
                 TriggerClientEvent('ox_lib:notify', src, {title = _("Noticket2"), position = 'top', type = 'error'})
             end
         else
             player.Functions.RemoveItem('black_money', Amount)
             TriggerClientEvent('azakit_moneywash:moneywashactions', src, WashTotal)
-            Citizen.Wait(WashDuration)
-            local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.PlayerData.citizenid .. "\n**ID:** " .. src .. "\n**Log:** Moneywash: " .. Amount .. " black money and earned " .. WashTotal .. " money."
+            local message = "**Steam:** " .. GetPlayerName(src) .. "\n**Identifier:** " .. player.PlayerData.citizenid .. "\n**ID:** " .. src .. "\n**Log:** Moneywash: " .. Amount .. " black money — expected reward: " .. WashTotal .. " money."
             discordLog(message, Webhook)
+            Citizen.Wait(WashDuration)
         end
     else
         TriggerClientEvent('ox_lib:notify', src, {title = _("Noblackmoney"), position = 'top', type = 'error'})
     end
 end
+end)
+
+RegisterServerEvent('azakit_moneywash:cancelMoneywash')
+AddEventHandler('azakit_moneywash:cancelMoneywash', function()
+    local src = source
+    local player = nil
+
+    -- Framework check
+    if FrameworkType == "ESX" then
+        player = ESX.GetPlayerFromId(src)
+    elseif FrameworkType == "QBCore" then
+        player = QBCore.Functions.GetPlayer(src)
+    end
+
+    if not player then
+        print("[MoneyWash] Player not found during cancel event for ID: " .. tostring(src))
+        return
+    end
+
+    -- Get identifiers for log
+    local identifier = "unknown"
+    if FrameworkType == "ESX" then
+        identifier = player.identifier or "N/A"
+    elseif FrameworkType == "QBCore" then
+        identifier = player.PlayerData and player.PlayerData.citizenid or "N/A"
+    end
+
+    -- Discord log message
+    local message = "**Steam:** " .. GetPlayerName(src)
+        .. "\n**Identifier:** " .. identifier
+        .. "\n**ID:** " .. src
+        .. "\n**Log:** ❌ Moneywash was cancelled (player left the wash area)."
+
+    discordLog(message, Webhook)
 end)
 
 function discordLog(message, webhook)
