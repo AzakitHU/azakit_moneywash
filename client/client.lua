@@ -68,7 +68,6 @@ AddEventHandler("azakit_moneywash:StartMoneyWash", function()
     TriggerServerEvent('azakit_moneywash:Start')
 end)
 
-
 RegisterNetEvent('azakit_moneywash:policeCheckResult')
 AddEventHandler('azakit_moneywash:policeCheckResult', function(copsAvailable)
     if copsAvailable then
@@ -81,7 +80,6 @@ AddEventHandler('azakit_moneywash:policeCheckResult', function(copsAvailable)
               })
     end
 end)
-
 
 RegisterNetEvent('azakit_moneywash:Check', function()
    
@@ -165,9 +163,11 @@ function WashMoney()
             local WashTicket2 = exports.ox_inventory:Search('count', 'moneywashticket2')
             local WashTicket3 = exports.ox_inventory:Search('count', 'moneywashticket3')
 
-            local animDict = 'anim@gangops@facility@servers@bodysearch@'			        
-            local animName = 'player_search'
-            lib.requestAnimDict(animDict, 10)
+            local animDict = 'anim@gangops@facility@servers@bodysearch@'
+            RequestAnimDict(animDict)
+            while not HasAnimDictLoaded(animDict) do
+                Citizen.Wait(50)
+            end
 
             while not HasAnimDictLoaded(animDict) do
                 Citizen.Wait(100)
@@ -270,8 +270,21 @@ function WashMoney()
             end
         else
             if not MWashCooldown then
-                lib.requestAnimDict('anim@gangops@facility@servers@bodysearch@', 10)
-                TaskPlayAnim(PlayerPedId(), 'anim@gangops@facility@servers@bodysearch@', 'player_search', 8.0, -8.0, -1, 48, 0)
+                local animDict = 'anim@gangops@facility@servers@bodysearch@'
+            
+                -- Safely load the animation dictionary
+                RequestAnimDict(animDict)
+                while not HasAnimDictLoaded(animDict) do
+                    Citizen.Wait(50)
+                end
+            
+                if not HasAnimDictLoaded(animDict) then
+                    print(('[MoneyWash] Animation dict failed to load after timeout: %s'):format(animDict))
+                    return
+                end
+            
+                -- Play the animation
+                TaskPlayAnim(PlayerPedId(), animDict, animName, 8.0, -8.0, -1, 48, 0, false, false, false)
                 local input = lib.inputDialog(_("Amount"), { _("Amount2") })
                 if not input then return end
                 local WashAmount = tonumber(input[1])
@@ -288,8 +301,6 @@ function WashMoney()
         end
     end
 end
-
-
 
 RegisterNetEvent('azakit_moneywash:moneywashactions')
 AddEventHandler('azakit_moneywash:moneywashactions', function(WashTotal)
@@ -364,8 +375,6 @@ AddEventHandler('azakit_moneywash:moneywashactions', function(WashTotal)
         end
     end)
 end)
-
-
 
 RegisterNetEvent("azakit_moneywash:EnableRewardPickup")
 AddEventHandler("azakit_moneywash:EnableRewardPickup", function(WashTotal, startPos)
