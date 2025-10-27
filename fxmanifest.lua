@@ -3,7 +3,7 @@ game "gta5"
 lua54 'yes'
 
 name         'azakit_moneywash'
-version      '1.2.0'
+version      '1.2.1'
 author 'Azakit'
 description 'Moneywash with tickets, licenses, tax levels, transport'
 
