@@ -165,7 +165,8 @@ function WashMoney()
             local WashTicket2 = exports.ox_inventory:Search('count', 'moneywashticket2')
             local WashTicket3 = exports.ox_inventory:Search('count', 'moneywashticket3')
 
-            local animDict = 'anim@gangops@facility@servers@bodysearch@'
+            local animDict = 'anim@gangops@facility@servers@bodysearch@'			        
+            local animName = 'player_search'
             lib.requestAnimDict(animDict, 10)
 
             while not HasAnimDictLoaded(animDict) do
@@ -182,7 +183,6 @@ function WashMoney()
                 return
             end
 
-            SetEntityHeading(PlayerPedId(), 246.5098)
             TaskPlayAnim(PlayerPedId(), animDict, 'player_search', 8.0, -8.0, -1, 48, 0)
 
             local input = lib.inputDialog(_("Amount"), { _("Amount2") })
@@ -270,7 +270,6 @@ function WashMoney()
             end
         else
             if not MWashCooldown then
-                SetEntityHeading(PlayerPedId(), 246.5098)
                 lib.requestAnimDict('anim@gangops@facility@servers@bodysearch@', 10)
                 TaskPlayAnim(PlayerPedId(), 'anim@gangops@facility@servers@bodysearch@', 'player_search', 8.0, -8.0, -1, 48, 0)
                 local input = lib.inputDialog(_("Amount"), { _("Amount2") })
